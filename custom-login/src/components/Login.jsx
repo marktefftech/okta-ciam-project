@@ -14,7 +14,7 @@ import { useOktaAuth } from '@okta/okta-react';
 import * as OktaSignIn from '@okta/okta-signin-widget';
 import '@okta/okta-signin-widget/dist/css/okta-sign-in.min.css';
 
-import config from './config';
+import config from '../config';
 
 const Login = () => {
   const { oktaAuth } = useOktaAuth();
@@ -39,6 +39,9 @@ const Login = () => {
       features: {
         registration: true, // Enable self-service registration flow
       },
+      idps: [
+        { type: 'GOOGLE', id: '0oas1xf52O9XhIAYb5d6' },
+      ],
       i18n: {
         en: {
           'primaryauth.title': 'Sign in to Clubhouse',
