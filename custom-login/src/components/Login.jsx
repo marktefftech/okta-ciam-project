@@ -35,16 +35,21 @@ const Login = () => {
       baseUrl: issuer.split('/oauth2')[0],
       clientId,
       redirectUri,
-      logo: '/react.svg',
+      logo: '/lord-of-the-rings-png-logo-6404.png',
       features: {
         registration: true, // Enable self-service registration flow
       },
       idps: [
         { type: 'GOOGLE', id: '0oas1xf52O9XhIAYb5d6' },
+        { type: 'OKTA', id: '0oas1xf52O9XhIAYb5d6', text: 'Sign in with Okta', image: '/react.svg' },
+        { type: 'FACEBOOK', id: '0oas1xf52O9XhIAYb5d6' },
+        { type: 'APPLE', id: '0oas1xf52O9XhIAYb5d6' },
+        { type: 'LINKEDIN', id: '0oas1xf52O9XhIAYb5d6' },
+        { type: 'MICROSOFT', id: '0oas1xf52O9XhIAYb5d6' },
       ],
       i18n: {
         en: {
-          'primaryauth.title': 'Sign in to Clubhouse',
+          'primaryauth.title': 'Welcome to Lord of the Rings',
         },
       },
       authParams: {
