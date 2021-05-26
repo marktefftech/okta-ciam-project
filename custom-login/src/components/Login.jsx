@@ -41,7 +41,7 @@ const Login = () => {
       },
       idps: [
         { type: 'GOOGLE', id: '0oas1xf52O9XhIAYb5d6' },
-        { type: 'OKTA', id: '0oas1xf52O9XhIAYb5d6', text: 'Sign in with Okta', image: '/react.svg' },
+        { type: 'OKTA', id: '0oas1xf52O9XhIAYb5d6', text: 'Sign in with Okta', logo: '/react.svg' },
         { type: 'FACEBOOK', id: '0oas1xf52O9XhIAYb5d6' },
         { type: 'APPLE', id: '0oas1xf52O9XhIAYb5d6' },
         { type: 'LINKEDIN', id: '0oas1xf52O9XhIAYb5d6' },

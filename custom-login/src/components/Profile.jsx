@@ -39,7 +39,7 @@ const Profile = () => {
 
   return (
     <div>
-      <div>
+      <div className="cardContainer">
         <Header as="h1">
           <Icon name="key" />
           {' '}

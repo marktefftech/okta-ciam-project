@@ -14,9 +14,9 @@
 import React, { useState, useEffect } from 'react';
 import { useOktaAuth } from '@okta/okta-react';
 import { Header, Icon, Table } from 'semantic-ui-react';
-import AddUser from './AddUser';
-import DeleteUser from './DeleteUser';
-import CreateAdmin from './CreateAdmin';
+import AddUser from './admin/AddUser';
+import DeleteUser from './admin/DeleteUser';
+import CreateAdmin from './admin/CreateAdmin';
 
 const Admin = () => {
   const { authState, oktaAuth } = useOktaAuth();
@@ -61,7 +61,7 @@ const Admin = () => {
   if (!authState.idToken.claims.customGroupClaim) {
     console.log('found the claim: ')
     return (
-      <div>
+      <div className="cardContainer">
         <p>You can't see this since you aren't an admin :(</p>
       </div>
     );
