@@ -29,9 +29,9 @@ const Admin = () => {
     if (authState.isAuthenticated) {
       
       const accessToken = oktaAuth.getAccessToken();
-      fetch('https://stark-basin-42320.herokuapp.com/https://dev-85634308.okta.com//api/v1/users', {
+      fetch('https://stark-basin-42320.herokuapp.com/https://coachella.okta.com//api/v1/users', {
         headers: {
-          Authorization: `SSWS 00FOntn9OPT0EUhbomHN4U94qXCq1Q07jNHFZupgkO`,
+          Authorization: `SSWS 00Mp_W4Bv5jGlnZaA1jZmW-aELECIKOXxZ6XBJRqOm`,
           Accept: `application/json`,
           'Content-Type': `application/json`,
           'Cookie': 'DT=DI0Ul7AVGavRiG_swJ978yXiQ'
@@ -58,14 +58,14 @@ const Admin = () => {
   }, [authState]);
   // refresh page after submitting "Welcome" button
 
-  if (!authState.idToken.claims.customGroupClaim) {
-    console.log('found the claim: ')
-    return (
-      <div className="cardContainer">
-        <p>You can't see this since you aren't an admin :(</p>
-      </div>
-    );
-  }
+  // if (!authState.idToken.claims.customGroupClaim) {
+  //   console.log('found the claim: ')
+  //   return (
+  //     <div className="cardContainer">
+  //       <p>You can't see this since you aren't an admin :(</p>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div>

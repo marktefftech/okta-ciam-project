@@ -62,12 +62,12 @@ const Home = () => {
               {' '}
               !
             </p>
-            <p>
+            {/* <p>
               You were greatly missed by your account manager,&nbsp;
               {' '}
               <code className="codeText">{userInfo.manager}</code>
               {' '}
-            </p>
+            </p> */}
             <h3>Next Steps</h3>
             <div>
               <ul>
