@@ -43,7 +43,7 @@ const Home = () => {
   }
 
   return (
-    <div>
+    <div className="cardContainer">
       <div>
         <Header className="testi" as="h1">Clubhouse 🏦</Header>
 
@@ -54,33 +54,35 @@ const Home = () => {
         && (
         <div>
           <Header as="h2">Congrats, you are now securely logged into your account</Header>
-          <p>
-            Welcome back,&nbsp;
-            {' '}
-            <code className="codeText">{userInfo.name}</code>
-            {' '}
-            !
-          </p>
-          <p>
-            You were greatly missed by your account manager,&nbsp;
-            {' '}
-            <code className="codeText">{userInfo.manager}</code>
-            {' '}
-          </p>
-          <h3>Next Steps</h3>
-          <div>
-            <ul>
-              <li>
-                <p>
-                  You have successfully authenticated against through Okta and have an ID token and access token in local storage.
-                  Visit your
-                  {' '}
-                  <a href="/profile">profile</a>
-                  {' '}
-                  page to take a look.
-                </p>
-              </li>
-            </ul>
+          <div className="cardContainer">
+            <p>
+              Welcome back,&nbsp;
+              {' '}
+              <code className="codeText">{userInfo.name}</code>
+              {' '}
+              !
+            </p>
+            {/* <p>
+              You were greatly missed by your account manager,&nbsp;
+              {' '}
+              <code className="codeText">{userInfo.manager}</code>
+              {' '}
+            </p> */}
+            <h3>Next Steps</h3>
+            <div>
+              <ul>
+                <li>
+                  <p>
+                    You have successfully authenticated against through Okta and have an ID token and access token in local storage.
+                    Visit your
+                    {' '}
+                    <a href="/profile">profile</a>
+                    {' '}
+                    page to take a look.
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         )}

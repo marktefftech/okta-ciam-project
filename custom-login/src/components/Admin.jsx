@@ -14,9 +14,10 @@
 import React, { useState, useEffect } from 'react';
 import { useOktaAuth } from '@okta/okta-react';
 import { Header, Icon, Table } from 'semantic-ui-react';
-import AddUser from './AddUser';
-import DeleteUser from './DeleteUser';
-import CreateAdmin from './CreateAdmin';
+import AddUser from './admin/AddUser';
+import DeleteUser from './admin/DeleteUser';
+import CreateAdmin from './admin/CreateAdmin';
+import Editor from './admin/Editor';
 
 const Admin = () => {
   const { authState, oktaAuth } = useOktaAuth();
@@ -29,9 +30,9 @@ const Admin = () => {
     if (authState.isAuthenticated) {
       
       const accessToken = oktaAuth.getAccessToken();
-      fetch('https://stark-basin-42320.herokuapp.com/https://dev-85634308.okta.com//api/v1/users', {
+      fetch('https://stark-basin-42320.herokuapp.com/https://coachella.okta.com//api/v1/users', {
         headers: {
-          Authorization: `SSWS 00FOntn9OPT0EUhbomHN4U94qXCq1Q07jNHFZupgkO`,
+          Authorization: `SSWS 00Mp_W4Bv5jGlnZaA1jZmW-aELECIKOXxZ6XBJRqOm`,
           Accept: `application/json`,
           'Content-Type': `application/json`,
           'Cookie': 'DT=DI0Ul7AVGavRiG_swJ978yXiQ'
@@ -58,22 +59,22 @@ const Admin = () => {
   }, [authState]);
   // refresh page after submitting "Welcome" button
 
-  if (!authState.idToken.claims.customGroupClaim) {
-    console.log('found the claim: ')
-    return (
-      <div>
-        <p>You can't see this since you aren't an admin :(</p>
-      </div>
-    );
-  }
+  // if (!authState.idToken.claims.customGroupClaim) {
+  //   console.log('found the claim: ')
+  //   return (
+  //     <div className="cardContainer">
+  //       <p>You can't see this since you aren't an admin :(</p>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div>
       <div>
         <Header as="h1">
-          <Icon name="edit outline" />
+          <Icon name="code" />
           {' '}
-          Administrative Profile
+          Let's get started with the Okta API
           {' '}
         </Header>
         <p>
@@ -87,19 +88,6 @@ const Admin = () => {
           {' '}
           , which will ensure that this page cannot be accessed until you have authenticated and are labeled as an Administrator
         </p>
-        <div>
-          <ul>
-            <li>
-              <p>
-                Take a look at how 
-                {' '}
-                <a href="https://developer.okta.com/docs/reference/postman-collections/"> Okta Postman Collections</a>
-                {' '}
-                make development easy
-              </p>
-            </li>
-          </ul>
-        </div>
         <Table>
           <thead>
             <tr>
@@ -128,6 +116,8 @@ const Admin = () => {
           </tbody>    
         </Table> 
         <br />
+        {/* <Editor /> 
+        <br /> */}
         <AddUser />
         <br />
         <DeleteUser />

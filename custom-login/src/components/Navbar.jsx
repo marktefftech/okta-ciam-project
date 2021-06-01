@@ -32,6 +32,12 @@ const Navbar = () => {
             <Link to="/">Clubhouse Bank</Link>
           </Menu.Item>
           {authState.isAuthenticated && (
+            <Menu.Item id="profile-button">
+              <Icon name="edit outline" />
+              <Link to="/admin">API</Link>
+            </Menu.Item>
+          )}
+          {authState.isAuthenticated && (
             <Menu.Item id="key">
               <Icon name="address card outline" />
               <Link to="/profile">Profile</Link>
@@ -42,12 +48,6 @@ const Navbar = () => {
             <Icon name="money bill alternate outline" />
             <Link to="/messages">Transactions</Link>
           </Menu.Item>
-          )}
-          {authState.isAuthenticated && (
-            <Menu.Item id="profile-button">
-              <Icon name="edit outline" />
-              <Link to="/admin">Admin</Link>
-            </Menu.Item>
           )}
           {authState.isAuthenticated && <Menu.Item id="logout-button" onClick={logout}>Logout</Menu.Item>}
           {!authState.isPending && !authState.isAuthenticated && <Menu.Item onClick={login}>Login</Menu.Item>}
