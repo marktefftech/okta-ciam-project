@@ -31,3 +31,9 @@ body {
   padding: 1rem;
   border-radius: 10px;
 }
+
+.cardContainerAdmin {
+  background-color: pink;
+  padding: 1rem;
+  border-radius: 10px;
+}

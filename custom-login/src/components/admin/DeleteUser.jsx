@@ -48,7 +48,7 @@ const Admin = () => {
   }
 
   return (
-    <div>
+    <div className="cardContainerAdmin">
       <div>
         <Header as="h1">
           <Icon name="circle notched" />

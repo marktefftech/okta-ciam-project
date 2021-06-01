@@ -12,6 +12,7 @@
  */
 import { Header, Icon} from 'semantic-ui-react';
 import React, { useState } from 'react';
+import '../../index.css';
 
 
 const Admin = () => {
@@ -57,7 +58,7 @@ const Admin = () => {
 
   return (
     <div>
-      <div>
+      <div className="cardContainerAdmin">
         <Header as="h1">
           <Icon name="plus square outline" />
           {' '}

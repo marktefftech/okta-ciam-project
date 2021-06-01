@@ -17,6 +17,7 @@ import { Header, Icon, Table } from 'semantic-ui-react';
 import AddUser from './admin/AddUser';
 import DeleteUser from './admin/DeleteUser';
 import CreateAdmin from './admin/CreateAdmin';
+import Editor from './admin/Editor';
 
 const Admin = () => {
   const { authState, oktaAuth } = useOktaAuth();
@@ -71,9 +72,9 @@ const Admin = () => {
     <div>
       <div>
         <Header as="h1">
-          <Icon name="edit outline" />
+          <Icon name="code" />
           {' '}
-          Administrative Profile
+          Let's get started with the Okta API
           {' '}
         </Header>
         <p>
@@ -87,19 +88,6 @@ const Admin = () => {
           {' '}
           , which will ensure that this page cannot be accessed until you have authenticated and are labeled as an Administrator
         </p>
-        <div>
-          <ul>
-            <li>
-              <p>
-                Take a look at how 
-                {' '}
-                <a href="https://developer.okta.com/docs/reference/postman-collections/"> Okta Postman Collections</a>
-                {' '}
-                make development easy
-              </p>
-            </li>
-          </ul>
-        </div>
         <Table>
           <thead>
             <tr>
@@ -128,6 +116,8 @@ const Admin = () => {
           </tbody>    
         </Table> 
         <br />
+        {/* <Editor /> 
+        <br /> */}
         <AddUser />
         <br />
         <DeleteUser />
