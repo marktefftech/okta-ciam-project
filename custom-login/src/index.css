@@ -14,7 +14,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url("https://gfycat.com/anyfaithfulhylaeosaurus") !important;
+  background-image: url("../public/img/stars.gif") !important;
 }
 
 .testi {
@@ -36,4 +36,26 @@ body {
   background-color: pink;
   padding: 1rem;
   border-radius: 10px;
+}
+
+@font-face {
+  font-family: 'StarWars';
+  src: local('StarWars'), url(../public/fonts/SfDistantGalaxyItalic-WV3Y.ttf) format('opentype');
+}
+
+.starWars {
+  color: white;
+  font-size: 8rem;
+  font-family: StarWars !important;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.flowContainer {
+  background-color: white;
+  padding: 1rem;
+}
+
+.flowText {
+  text-align: center;
 }

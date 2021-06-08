@@ -35,7 +35,7 @@ const Login = () => {
       baseUrl: issuer.split('/oauth2')[0],
       clientId,
       redirectUri,
-      logo: '/lord-of-the-rings-png-logo-6404.png',
+      logo: '/img/ls.png',
       features: {
         registration: true, // Enable self-service registration flow
       },
@@ -49,7 +49,7 @@ const Login = () => {
       ],
       i18n: {
         en: {
-          'primaryauth.title': 'Welcome to Lord of the Rings',
+          'primaryauth.title': 'Welcome Padawan',
         },
       },
       authParams: {

@@ -15,6 +15,7 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button, Header } from 'semantic-ui-react';
 import '../index.css';
+import Title from './Title';
 
 const Home = () => {
   const history = useHistory();
@@ -43,9 +44,10 @@ const Home = () => {
   }
 
   return (
-    <div className="cardContainer">
-      <div>
-        <Header className="testi" as="h1">Clubhouse 🏦</Header>
+    <div>
+      <Title />
+      <div className="cardContainer">
+        <Header className="testi" as="h1">CIAM Wars</Header>
 
         { authState.isAuthenticated && !userInfo
         && <div>Loading user information...</div>}

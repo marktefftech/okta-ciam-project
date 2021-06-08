@@ -27,10 +27,16 @@ const Navbar = () => {
       <Menu fixed="top" inverted>
         <Container>
           <Menu.Item header>
-            <Image size="mini" src="/react.svg" />
+            <Image size="mini" src="/img/react.svg" />
             &nbsp;
-            <Link to="/">Clubhouse Bank</Link>
+            <Link to="/">CIAM Wars</Link>
           </Menu.Item>
+          {authState.isAuthenticated && (
+          <Menu.Item id="messages-button">
+            <Icon name="add_circle" />
+            <Link to="/flows">Flows</Link>
+          </Menu.Item>
+          )}
           {authState.isAuthenticated && (
             <Menu.Item id="profile-button">
               <Icon name="edit outline" />

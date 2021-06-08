@@ -22,6 +22,7 @@ import Messages from './components/Messages';
 import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import Admin from './components/Admin';
+import Flows from './components/Flows';
 
 const oktaAuth = new OktaAuth(config.oidc);
 
@@ -45,6 +46,7 @@ const App = () => {
           <Route path="/login/callback" component={LoginCallback} />
           <Route path="/login" component={CustomLoginComponent} />
           <SecureRoute path="/messages" component={Messages} />
+          <SecureRoute path="/flows" component={Flows} />
           <SecureRoute path="/profile" component={Profile} />
           <SecureRoute path="/admin" component={Admin} />
         </Switch>
