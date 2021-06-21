@@ -27,16 +27,10 @@ const Navbar = () => {
       <Menu fixed="top" inverted>
         <Container>
           <Menu.Item header>
-            <Image size="mini" src="/react.svg" />
+            <Image size="mini" src="/img/react.svg" />
             &nbsp;
-            <Link to="/">Clubhouse Bank</Link>
+            <Link to="/">CIAM Wars</Link>
           </Menu.Item>
-          {authState.isAuthenticated && (
-            <Menu.Item id="profile-button">
-              <Icon name="edit outline" />
-              <Link to="/admin">API</Link>
-            </Menu.Item>
-          )}
           {authState.isAuthenticated && (
             <Menu.Item id="key">
               <Icon name="address card outline" />
@@ -47,6 +41,18 @@ const Navbar = () => {
           <Menu.Item id="messages-button">
             <Icon name="money bill alternate outline" />
             <Link to="/messages">Transactions</Link>
+          </Menu.Item>
+          )}
+          {authState.isAuthenticated && (
+            <Menu.Item id="profile-button">
+              <Icon name="edit outline" />
+              <Link to="/admin">API</Link>
+            </Menu.Item>
+          )}
+          {authState.isAuthenticated && (
+          <Menu.Item id="messages-button">
+            <Icon name="stack overflow" />
+            <Link to="/flows">Flows</Link>
           </Menu.Item>
           )}
           {authState.isAuthenticated && <Menu.Item id="logout-button" onClick={logout}>Logout</Menu.Item>}
