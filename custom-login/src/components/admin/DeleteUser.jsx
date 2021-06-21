@@ -23,8 +23,7 @@ const Admin = () => {
     var myHeaders = new Headers();
     myHeaders.append("Accept", "application/json");
     myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("Authorization", "SSWS 00FOntn9OPT0EUhbomHN4U94qXCq1Q07jNHFZupgkO");
-    myHeaders.append("Cookie", "DT=DI0Ul7AVGavRiG_swJ978yXiQ; JSESSIONID=B317B039E46BA1694F0F77EE71852437");
+    myHeaders.append("Authorization", "SSWS 00Mp_W4Bv5jGlnZaA1jZmW-aELECIKOXxZ6XBJRqOm");
 
     var raw = "";
 
@@ -36,7 +35,7 @@ const Admin = () => {
     };
 
     var userIdString = {userId}
-    var url = "https://stark-basin-42320.herokuapp.com/https://dev-85634308.okta.com/" + "/api/v1/users/" + userId + "/lifecycle/deactivate"
+    var url = "https://coachella.okta.com/" + "/api/v1/users/" + userId + "/lifecycle/deactivate"
 
     fetch( url , requestOptions)
       .then(response => response.text())

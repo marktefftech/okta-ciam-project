@@ -29,7 +29,7 @@ const Navbar = () => {
           <Menu.Item header>
             <Image size="mini" src="/img/react.svg" />
             &nbsp;
-            <Link to="/">CIAM Wars</Link>
+            <Link to="/">Star Wars</Link>
           </Menu.Item>
           {authState.isAuthenticated && (
             <Menu.Item id="key">

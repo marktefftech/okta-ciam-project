@@ -19,7 +19,7 @@ const Title = () => {
 
   return (
     <div>
-      <h1 className="starWars"> CIAM WARS </h1>
+      <h1 className="starWars"> STAR WARS </h1>
       {/* <img src={"https://p.kindpng.com/picc/s/123-1239680_star-wars-lightsaber-science-fiction-blue-lightsaber-glow.png"} alt="Logo" /> */}
     </div>
   );

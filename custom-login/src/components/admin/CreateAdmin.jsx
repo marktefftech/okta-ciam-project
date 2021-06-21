@@ -24,7 +24,7 @@ const Admin = () => {
     var myHeaders = new Headers();
     myHeaders.append("Accept", "application/json");
     myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("Authorization", "SSWS 00FOntn9OPT0EUhbomHN4U94qXCq1Q07jNHFZupgkO");
+    myHeaders.append("Authorization", "SSWS 00Mp_W4Bv5jGlnZaA1jZmW-aELECIKOXxZ6XBJRqOm");
     myHeaders.append("Cookie", "DT=DI0Ul7AVGavRiG_swJ978yXiQ; JSESSIONID=0AE84B4F0F77D00191CFCD3302B9ABB5");
 
     var raw = "";
@@ -36,7 +36,7 @@ const Admin = () => {
       redirect: 'follow'
     };
 
-    var url = "https://stark-basin-42320.herokuapp.com/https://dev-85634308.okta.com/api/v1/groups/00gapbv7s4gmRgx2H5d6/users/" + userId
+    var url = "https://coachella.okta.com/api/v1/groups/00gapbv7s4gmRgx2H5d6/users/" + userId
 
     fetch(url, requestOptions)
         .then(response => response.text())
