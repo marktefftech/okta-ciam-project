@@ -43,7 +43,7 @@ const Profile = () => {
         <Header as="h1">
           <Icon name="key" />
           {' '}
-          My Profile (Identity in action)
+          My Profile
           {' '}
         </Header>
         <p>
@@ -87,19 +87,22 @@ const Profile = () => {
           is a simple and language-independent way to reference, transform, and combine attributes before you store them on a user profile
         </p>
       </div>
-      <h3>Next Steps</h3>
-      <div>
-        <ul>
-          <li>
-            <p>
-              Now that we have a token in storage, we are safe to interact with other applications securely. Head over to
-              {' '}
-              <a href="/messages">transactions</a>
-              {' '}
-              to take a look.
-            </p>
-          </li>
-        </ul>
+      <br />
+      <div className="cardContainer">
+        <h3> Next Steps</h3>
+        <div>
+          <ul>
+            <li>
+              <p>
+                Now that we have a token in storage, we are safe to interact with other applications securely. Head over to
+                {' '}
+                <a href="/messages">transactions</a>
+                {' '}
+                to take a look.
+              </p>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

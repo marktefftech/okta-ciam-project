@@ -47,8 +47,6 @@ const Home = () => {
     <div>
       <Title />
       <div className="cardContainer">
-        <Header className="testi" as="h1">CIAM Wars</Header>
-
         { authState.isAuthenticated && !userInfo
         && <div>Loading user information...</div>}
 

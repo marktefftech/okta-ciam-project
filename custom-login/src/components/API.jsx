@@ -17,7 +17,6 @@ import { Header, Icon, Table } from 'semantic-ui-react';
 import AddUser from './admin/AddUser';
 import DeleteUser from './admin/DeleteUser';
 import CreateAdmin from './admin/CreateAdmin';
-import Editor from './admin/Editor';
 
 const Admin = () => {
   const { authState, oktaAuth } = useOktaAuth();
@@ -70,7 +69,7 @@ const Admin = () => {
 
   return (
     <div>
-      <div>
+      <div className="cardContainer">
         <Header as="h1">
           <Icon name="code" />
           {' '}

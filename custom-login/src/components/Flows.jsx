@@ -21,11 +21,21 @@ const Flows = () => {
       <div className="flowContainer">
         <h2 className="flowText">Authorization Code Flow</h2>
       </div>
+      <br />
       <div className="flowContainer">
         <h2 className="flowText">Authorization Code Flow with PKCE</h2>
       </div>
+      <br />
+      <div className="flowContainer">
+        <h2 className="flowText">Resource Owner Password</h2>
+      </div>
+      <br />
       <div className="flowContainer">
         <h2 className="flowText">Client Credentials Flow</h2>
+      </div>
+      <br />
+      <div className="flowContainer">
+        <h2 className="flowText">Implicit Flow</h2>
       </div>
       {/* <img src={"https://p.kindpng.com/picc/s/123-1239680_star-wars-lightsaber-science-fiction-blue-lightsaber-glow.png"} alt="Logo" /> */}
     </div>
